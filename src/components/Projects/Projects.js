@@ -1,13 +1,8 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import ProjectCard from "./ProjectCards";
-import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
+import ProjectCard from "./ProjectCards"
+import Particle from "../Particle"
+import sampleImg from "../../Assets/Projects/blog.png" // temporary sample image
 
 function Projects() {
   return (
@@ -18,79 +13,66 @@ function Projects() {
           My Recent <strong className="purple">Works </strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+          Here are some of the projects I've developed recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          {/*  E-Commerce Web Application */}
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={sampleImg}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="E-Commerce Web Application"
+              description="Full-stack MERN e-commerce app with user login, product management, shopping cart, and admin dashboard. Includes MVC architecture, JWT authentication, and Stripe payment integration."
+              ghLink="https://github.com/Nkugavarathan/E-Commerce-website.git"
             />
           </Col>
 
+          {/* AI Chatbot */}
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={sampleImg}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Full Stack AI Chatbot"
+              description="MERN-based AI chatbot app using Google Gemini and ImageKit. Added payment gateway for credit purchases, JWT auth, and deployed full SaaS system."
+              ghLink="https://github.com/Nkugavarathan/ai-chatbot-mern.git"
             />
           </Col>
 
+          {/* Next.js E-Commerce Website */}
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={sampleImg}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="Full Stack E-Commerce Website"
+              description="Next.js-based e-commerce site with MongoDB and Tailwind CSS. Integrated Clerk for authentication and Inngest for background automation."
+              ghLink="https://github.com/Nkugavarathan/nextjs-ecommerce.git"
+            />
+          </Col>
+          {/* Food Delivery App */}
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={sampleImg}
+              isBlog={false}
+              title="Full Stack Food Delivery App"
+              description="Developed a React + Spring Boot food delivery app using MongoDB. Integrated Razorpay for secure online payments and deployed with AWS. Built efficient APIs and responsive UI."
+              ghLink="https://github.com/Nkugavarathan/Food-delivery-app-react-springboot.git"
             />
           </Col>
 
+          {/* Library Management System */}
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={sampleImg}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+              title="Library Management System"
+              description="Java CLI-based system for managing books, borrowing, and returns. Applied OOP principles for modular and maintainable code."
+              ghLink="https://github.com/Nkugavarathan/Library-Management-System-Using-Java.git"
             />
           </Col>
         </Row>
       </Container>
     </Container>
-  );
+  )
 }
 
-export default Projects;
+export default Projects
