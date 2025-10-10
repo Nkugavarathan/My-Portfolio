@@ -624,7 +624,7 @@ button:focus {
 /* --------- */
 /* Resume */
 /* --------- */
-
+/* 
 .resume-section {
   position: relative !important;
   padding-top: 110px !important;
@@ -713,6 +713,74 @@ button:focus {
   font-size: 1.1em !important;
   font-family: sans-serif !important;
 }
+
+.resume {
+  max-height: 85vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  padding-right: 10px;
+}
+
+.react-pdf__Page {
+  margin-bottom: 15px;
+} */
+
+
+.resume-section {
+  position: relative !important;
+  padding-top: 110px !important;
+  padding-bottom: 60px !important; /* Increased bottom padding */
+  background-image: var(--section-background-color) !important;
+  color: white !important;
+}
+
+.resume {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px; /* adds even spacing between CV and buttons */
+}
+
+/* PDF Scroll + Look */
+.resume .pdf-container {
+  max-height: 80vh; /* limit only pdf, not entire section */
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  padding: 10px;
+}
+
+.react-pdf__Page {
+  margin-bottom: 15px;
+}
+
+.react-pdf__Page canvas {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+/* Responsive fix */
+@media (max-width: 767px) {
+  .resume-left,
+  .resume-right {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+  }
+
+  .resume-section {
+    padding-top: 90px !important;
+    padding-bottom: 80px !important;
+  }
+
+  .resume .pdf-container {
+    max-height: 70vh;
+  }
+}
+
+
+
 
 /* .like-btn {
   background-color: #934cce5e !important;
