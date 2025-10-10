@@ -38,7 +38,6 @@ function Projects() {
           {/* Next.js E-Commerce Website */}
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={sampleImg}
               isBlog={false}
               title="Full Stack E-Commerce Website"
               description="Next.js-based e-commerce site with MongoDB and Tailwind CSS. Integrated Clerk for authentication and Inngest for background automation."
