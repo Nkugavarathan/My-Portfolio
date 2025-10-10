@@ -13,8 +13,8 @@ function AboutCard() {
             from <span className="purple">Colombo, Sri Lanka.</span>
             <br />
             I’m currently pursuing a{" "}
-            <b>B.Sc. (Hons) in Computing and Information Systems</b>
-            at <b>Sabaragamuwa University of Sri Lanka</b> (3rd year).
+            <b>B.Sc. (Hons) in Computing and Information Systems </b>
+            at <b> Sabaragamuwa University of Sri Lanka</b> (3rd year).
             <br />
             <br />
             <b>Education</b>
