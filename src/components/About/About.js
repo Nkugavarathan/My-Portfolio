@@ -21,32 +21,68 @@ function About() {
               paddingBottom: "50px",
             }}
           >
-            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Know Who <strong className="irishblue">I'M</strong>
-            </h1>
-            <Aboutcard />
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: false, amount: 0.3 }}
+            >
+              <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
+                Know Who <strong className="irishblue">I'M</strong>
+              </h1>
+              <Aboutcard />
+            </motion.div>
           </Col>
+
           <Col
             md={5}
             style={{ paddingTop: "120px", paddingBottom: "50px" }}
             className="about-img"
           >
-            <img src={about} alt="about" className="img-fluid" />
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: false, amount: 0.3 }}
+            >
+              <img src={about} alt="about" className="img-fluid" />
+            </motion.div>
           </Col>
         </Row>
         <h1 className="project-heading">
           Professional <strong className="irishblue">Skillset </strong>
         </h1>
 
-        <Techstack />
+        <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          <Techstack />
+        </motion.div>
 
         <h1 className="project-heading">
           <strong className="irishblue">Tools</strong> I use
         </h1>
 
-        <Toolstack />
+        <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          <Toolstack />
+        </motion.div>
 
-        <Github />
+        <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          <Github />
+        </motion.div>
       </Container>
     </Container>
   )
