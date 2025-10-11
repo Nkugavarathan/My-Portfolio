@@ -9,12 +9,16 @@ function AboutCard() {
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
             Hi everyone, I'm{" "}
-            <span className="purple">Kugavarathan Navaraththtinarasa </span>
-            from <span className="purple">Colombo, Sri Lanka.</span>
+            <span className="irishblue">Kugavarathan Navaraththinarasa </span>
+            from <span className="irishblue">Colombo, Sri Lanka.</span>
             <br />
             I’m currently pursuing a{" "}
-            <b>B.Sc. (Hons) in Computing and Information Systems </b>
-            at <b> Sabaragamuwa University of Sri Lanka</b> (3rd year).
+            <b className="irishblue">
+              B.Sc. (Hons) in Computing and Information Systems{" "}
+            </b>
+            at{" "}
+            <b className="irishblue"> Sabaragamuwa University of Sri Lanka</b>{" "}
+            (3rd year).
             <br />
             <br />
             <b>Education</b>

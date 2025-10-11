@@ -14,14 +14,14 @@ function Home2() {
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+              LET ME <span className="irishblue"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
               I’m a passionate developer who loves building modern web
               applications and learning new technologies every day. 🚀
               <br />I have solid experience in
               <i>
-                <b className="purple">
+                <b className="irishblue">
                   {" "}
                   Java, JavaScript, PHP, and the MERN Stack.
                 </b>
@@ -29,17 +29,17 @@ function Home2() {
               <br />
               My main interests include developing{" "}
               <i>
-                <b className="purple">
+                <b className="irishblue">
                   full-stack web applications, Spring Boot backends,
                 </b>
               </i>{" "}
               and exploring areas like{" "}
               <i>
-                <b className="purple">AI & Cloud Technologies.</b>
+                <b className="irishblue">AI & Cloud Technologies.</b>
               </i>
               <br />I enjoy creating products with{" "}
-              <b className="purple">React.js, Node.js, and Spring Boot</b>, and
-              designing systems that are both scalable and efficient.
+              <b className="irishblue">React.js, Node.js, and Spring Boot</b>,
+              and designing systems that are both scalable and efficient.
             </p>
           </Col>
           <Col md={4} className="myAvtar">
@@ -55,7 +55,7 @@ function Home2() {
           <Col md={12} className="home-about-social">
             <h1>FIND ME ON</h1>
             <p>
-              Feel free to <span className="purple">connect </span>with me!
+              Feel free to <span className="irishblue">connect </span>with me!
             </p>
             <ul className="home-about-social-links">
               <li className="social-icons">
