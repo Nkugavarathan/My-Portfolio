@@ -2,106 +2,126 @@ import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
 import profile from "../../Assets/profile.jpg"
 import Tilt from "react-parallax-tilt"
-import { AiFillGithub } from "react-icons/ai"
-import { AiOutlineMail } from "react-icons/ai"
-import { FaWhatsapp } from "react-icons/fa"
-import { FaLinkedinIn } from "react-icons/fa"
+import { AiFillGithub, AiOutlineMail } from "react-icons/ai"
+import { FaWhatsapp, FaLinkedinIn } from "react-icons/fa"
+import { motion } from "framer-motion"
 
 function Home2() {
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
         <Row>
+          {/* LEFT SIDE - Text */}
           <Col md={8} className="home-about-description">
-            <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="irishblue"> INTRODUCE </span> MYSELF
-            </h1>
-            <p className="home-about-body">
-              I’m a passionate developer who loves building modern web
-              applications and learning new technologies every day. 🚀
-              <br />I have solid experience in
-              <i>
-                <b className="irishblue">
-                  {" "}
-                  Java, JavaScript, PHP, and the MERN Stack.
-                </b>
-              </i>
-              <br />
-              My main interests include developing{" "}
-              <i>
-                <b className="irishblue">
-                  full-stack web applications, Spring Boot backends,
-                </b>
-              </i>{" "}
-              and exploring areas like{" "}
-              <i>
-                <b className="irishblue">AI & Cloud Technologies.</b>
-              </i>
-              <br />I enjoy creating products with{" "}
-              <b className="irishblue">React.js, Node.js, and Spring Boot</b>,
-              and designing systems that are both scalable and efficient.
-            </p>
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: false, amount: 0.3 }}
+            >
+              <h1 style={{ fontSize: "2.6em" }}>
+                LET ME <span className="irishblue"> INTRODUCE </span> MYSELF
+              </h1>
+              <p className="home-about-body">
+                I’m a passionate developer who loves building modern web
+                applications and learning new technologies every day. 🚀
+                <br />I have solid experience in
+                <i>
+                  <b className="irishblue">
+                    {" "}
+                    Java, JavaScript, PHP, and the MERN Stack.
+                  </b>
+                </i>
+                <br />
+                My main interests include developing{" "}
+                <i>
+                  <b className="irishblue">
+                    full-stack web applications, Spring Boot backends,
+                  </b>
+                </i>{" "}
+                and exploring areas like{" "}
+                <i>
+                  <b className="irishblue">AI & Cloud Technologies.</b>
+                </i>
+                <br />I enjoy creating products with{" "}
+                <b className="irishblue">React.js, Node.js, and Spring Boot</b>,
+                and designing systems that are both scalable and efficient.
+              </p>
+            </motion.div>
           </Col>
+
+          {/* RIGHT SIDE - Image */}
           <Col md={4} className="myAvtar">
-            <Tilt>
-              <div className="avatar-container">
-                <img src={profile} alt="avatar" className="avatar-img" />
-              </div>
-            </Tilt>
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: false, amount: 0.3 }}
+            >
+              <Tilt>
+                <div className="avatar-container">
+                  <img src={profile} alt="avatar" className="avatar-img" />
+                </div>
+              </Tilt>
+            </motion.div>
           </Col>
         </Row>
 
         <Row>
           <Col md={12} className="home-about-social">
-            <h1>FIND ME ON</h1>
-            <p>
-              Feel free to <span className="irishblue">connect </span>with me!
-            </p>
-            <ul className="home-about-social-links">
-              <li className="social-icons">
-                <a
-                  href="https://github.com/Nkugavarathan"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiFillGithub />
-                </a>
-              </li>
-
-              <li className="social-icons">
-                <a
-                  href="https://www.linkedin.com/in/kugavarathan-navaraththinarasa-7ab094267/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-
-              <li className="social-icons">
-                <a
-                  href="mailto:kugavarathan28@gmail.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiOutlineMail />
-                </a>
-              </li>
-
-              <li className="social-icons">
-                <a
-                  href="https://wa.me/94775019192"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <FaWhatsapp />
-                </a>
-              </li>
-            </ul>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: false, amount: 0.3 }}
+            >
+              <h1>FIND ME ON</h1>
+              <p>
+                Feel free to <span className="irishblue">connect </span>with me!
+              </p>
+              <ul className="home-about-social-links">
+                <li className="social-icons">
+                  <a
+                    href="https://github.com/Nkugavarathan"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="icon-colour home-social-icons"
+                  >
+                    <AiFillGithub />
+                  </a>
+                </li>
+                <li className="social-icons">
+                  <a
+                    href="https://www.linkedin.com/in/kugavarathan-navaraththinarasa-7ab094267/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="icon-colour home-social-icons"
+                  >
+                    <FaLinkedinIn />
+                  </a>
+                </li>
+                <li className="social-icons">
+                  <a
+                    href="mailto:kugavarathan28@gmail.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="icon-colour home-social-icons"
+                  >
+                    <AiOutlineMail />
+                  </a>
+                </li>
+                <li className="social-icons">
+                  <a
+                    href="https://wa.me/94775019192"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="icon-colour home-social-icons"
+                  >
+                    <FaWhatsapp />
+                  </a>
+                </li>
+              </ul>
+            </motion.div>
           </Col>
         </Row>
       </Container>

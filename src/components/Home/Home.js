@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap"
 import Particle from "../Particle"
 import Home2 from "./Home2"
 import Type from "./Type"
+import home from "../../Assets/home.gif"
 
 function Home() {
   return (
@@ -34,7 +35,7 @@ function Home() {
 
             <Col md={5} style={{ paddingBottom: 20 }}>
               <img
-                src="https://github.com/Nkugavarathan/Nkugavarathan/blob/main/codergif.gif?raw=true"
+                src={home}
                 alt="home pic"
                 className="img-fluid"
                 style={{ maxHeight: "450px", borderRadius: "10px" }}
