@@ -6,6 +6,7 @@ import Techstack from "./Techstack"
 import Aboutcard from "./AboutCard"
 import about from "../../Assets/about.png"
 import Toolstack from "./Toolstack"
+import { motion } from "framer-motion"
 
 function About() {
   return (
@@ -54,10 +55,11 @@ function About() {
         </h1>
 
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: false, amount: 0.3 }}
+          style={{ marginBottom: "50px" }}
         >
           <Techstack />
         </motion.div>
@@ -65,21 +67,21 @@ function About() {
         <h1 className="project-heading">
           <strong className="irishblue">Tools</strong> I use
         </h1>
-
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: false, amount: 0.3 }}
+          style={{ marginBottom: "50px" }}
         >
           <Toolstack />
         </motion.div>
-
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: false, amount: 0.3 }}
+          style={{ marginBottom: "50px" }}
         >
           <Github />
         </motion.div>

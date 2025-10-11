@@ -4,10 +4,17 @@ import { Row } from "react-bootstrap"
 
 function Github() {
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+    <Row
+      style={{
+        justifyContent: "center",
+        paddingBottom: "10px",
+        marginBottom: "50px",
+      }}
+    >
       <h1 className="project-heading" style={{ paddingBottom: "20px" }}>
         Days I <strong className="irishblue">Code</strong>
       </h1>
+
       <GitHubCalendar
         username="Nkugavarathan"
         blockSize={15}

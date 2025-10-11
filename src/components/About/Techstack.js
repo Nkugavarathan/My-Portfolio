@@ -18,10 +18,16 @@ import {
   SiBootstrap,
   SiExpress,
 } from "react-icons/si"
-
+// import { motion } from "framer-motion"
 function Techstack() {
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+    <Row
+      style={{
+        justifyContent: "center",
+        paddingBottom: "50px",
+        marginBottom: "50px",
+      }}
+    >
       <Col xs={4} md={2} className="tech-icons">
         <DiJava />
       </Col>
