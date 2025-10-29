@@ -21,7 +21,7 @@ function Projects() {
             <ProjectCard
               isBlog={false}
               title="E-Commerce Web Application"
-              description="Developed a full-stack MERN e-commerce app with user login, product management, shopping cart, and admin dashboard. Integrated JWT authentication, Stripe payment gateway, and responsive UI."
+              description="Developed a full-stack MERN e-commerce app with user login, product management, shopping cart, and admin dashboard. Integrated JWT authentication, and responsive UI."
               tech="MongoDB, Express.js, React.js, Node.js, Tailwind CSS"
               ghLink="https://github.com/Nkugavarathan/E-Commerce-website.git"
             />
@@ -56,7 +56,7 @@ function Projects() {
               title="Smart School Management System"
               description="Developed a role-based web app for admins, teachers, students, and parents. Automated attendance, fee tracking, and academic records, with PDF reports and media sharing."
               tech="PHP, HTML, CSS, Bootstrap 5, JavaScript, MySQL, FPDF library"
-              ghLink="https://github.com/YOUR_USERNAME/smart-school-management"
+              ghLink="https://github.com/Nkugavarathan/School-Management-System"
             />
           </Col>
 
@@ -67,7 +67,7 @@ function Projects() {
               title="Movie Review Application"
               description="Designed a full-stack web app where users can browse and review movies in real time. Built with clear separation of frontend and backend logic using modern frameworks."
               tech="Java, Spring Boot, MongoDB, React"
-              ghLink="https://github.com/YOUR_USERNAME/movie-review-app"
+              ghLink="https://github.com/Nkugavarathan/movie-review-app"
             />
           </Col>
         </Row>
