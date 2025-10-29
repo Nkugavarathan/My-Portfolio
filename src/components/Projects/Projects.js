@@ -16,52 +16,58 @@ function Projects() {
           Here are some of the projects I've developed recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          {/*  E-Commerce Web Application   imgPath={sampleImg}*/}
+          {/* 1) E-Commerce Web Application */}
           <Col md={4} className="project-card">
             <ProjectCard
               isBlog={false}
               title="E-Commerce Web Application"
-              description="Full-stack MERN e-commerce app with user login, product management, shopping cart, and admin dashboard. Includes MVC architecture, JWT authentication, and Stripe payment integration."
+              description="Developed a full-stack MERN e-commerce app with user login, product management, shopping cart, and admin dashboard. Integrated JWT authentication, Stripe payment gateway, and responsive UI."
+              tech="MongoDB, Express.js, React.js, Node.js, Tailwind CSS"
               ghLink="https://github.com/Nkugavarathan/E-Commerce-website.git"
             />
           </Col>
 
-          {/* AI Chatbot */}
+          {/* 2) Full Stack AI Chatbot */}
           <Col md={4} className="project-card">
             <ProjectCard
               isBlog={false}
               title="Full Stack AI Chatbot"
-              description="MERN-based AI chatbot app using Google Gemini and ImageKit. Added payment gateway for credit purchases, JWT auth, and deployed full SaaS system."
+              description="Built a MERN-based AI chatbot that generates text via Google Gemini and images via ImageKit. Added payment gateway for credit purchases, JWT authentication, and deployed as a SaaS product."
+              tech="MongoDB, Express.js, React.js, Node.js, ImageKit, OpenAI API"
               ghLink="https://github.com/Nkugavarathan/ai-chatbot-mern.git"
             />
           </Col>
 
-          {/* Next.js E-Commerce Website */}
+          {/* 3) Full Stack E-Commerce Website */}
           <Col md={4} className="project-card">
             <ProjectCard
               isBlog={false}
               title="Full Stack E-Commerce Website"
-              description="Next.js-based e-commerce site with MongoDB and Tailwind CSS. Integrated Clerk for authentication and Inngest for background automation."
+              description="Created a Next.js-based e-commerce platform with server-side rendering, integrated Clerk for authentication, and Inngest for background automation."
+              tech="Next.js, React.js, MongoDB, Tailwind CSS, Clerk, Inngest"
               ghLink="https://github.com/Nkugavarathan/nextjs-ecommerce.git"
             />
           </Col>
-          {/* Food Delivery App */}
+
+          {/* 4) Smart School Management System */}
           <Col md={4} className="project-card">
             <ProjectCard
               isBlog={false}
-              title="Full Stack Food Delivery App"
-              description="Developed a React + Spring Boot food delivery app using MongoDB. Integrated Razorpay for secure online payments and deployed with AWS. Built efficient APIs and responsive UI."
-              ghLink="https://github.com/Nkugavarathan/Food-delivery-app-react-springboot.git"
+              title="Smart School Management System"
+              description="Developed a role-based web app for admins, teachers, students, and parents. Automated attendance, fee tracking, and academic records, with PDF reports and media sharing."
+              tech="PHP, HTML, CSS, Bootstrap 5, JavaScript, MySQL, FPDF library"
+              ghLink="https://github.com/YOUR_USERNAME/smart-school-management"
             />
           </Col>
 
-          {/* Library Management System */}
+          {/* 5) Movie Review Application */}
           <Col md={4} className="project-card">
             <ProjectCard
               isBlog={false}
-              title="Library Management System"
-              description="Java CLI-based system for managing books, borrowing, and returns. Applied OOP principles for modular and maintainable code."
-              ghLink="https://github.com/Nkugavarathan/Library-Management-System-Using-Java.git"
+              title="Movie Review Application"
+              description="Designed a full-stack web app where users can browse and review movies in real time. Built with clear separation of frontend and backend logic using modern frameworks."
+              tech="Java, Spring Boot, MongoDB, React"
+              ghLink="https://github.com/YOUR_USERNAME/movie-review-app"
             />
           </Col>
         </Row>
