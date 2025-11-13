@@ -17,6 +17,7 @@ import {
   SiTailwindcss,
   SiBootstrap,
   SiExpress,
+  SiWordpress,
 } from "react-icons/si"
 // import { motion } from "framer-motion"
 function Techstack() {
@@ -70,6 +71,12 @@ function Techstack() {
       <Col xs={4} md={2} className="tech-icons">
         <DiGit />
       </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiWordpress />
+      </Col>
+      {/* <Col xs={4} md={2} className="tech-icons">
+        <SiN8N />
+      </Col> */}
     </Row>
   )
 }

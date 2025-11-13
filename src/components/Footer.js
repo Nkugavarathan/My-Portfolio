@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap"
 
 import { AiFillGithub } from "react-icons/ai"
 import { MdEmail } from "react-icons/md"
-import { FaLinkedinIn } from "react-icons/fa"
+import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa"
 
 function Footer() {
   const date = new Date()
@@ -50,6 +50,16 @@ function Footer() {
                 style={{ color: "white" }}
               >
                 <MdEmail />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://wa.me/94775019192"
+                target="_blank"
+                rel="noreferrer"
+                style={{ color: "white" }}
+              >
+                <FaWhatsapp />
               </a>
             </li>
           </ul>

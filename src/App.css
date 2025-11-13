@@ -191,6 +191,7 @@ button:focus {
   z-index: 1;
 }
 
+/* hover underscore effect */
 .navbar-nav .nav-item a::after {
   content: "";
   position: relative;

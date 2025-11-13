@@ -7,6 +7,7 @@ import { BsGithub } from "react-icons/bs"
 function ProjectCards(props) {
   return (
     <Card className="project-card-view">
+      {/*  style={{ position: "relative", minHeight: "200px" }} */}
       {/* <Card.Img variant="top" src={props.imgPath} alt="card-img" /> */}
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
@@ -14,7 +15,7 @@ function ProjectCards(props) {
           {props.description}
         </Card.Text>
 
-        {/* ✅ Add this line to show Tech Stack */}
+        {/*  show Tech Stack */}
         {props.tech && (
           <Card.Text style={{ fontSize: "0.9rem", color: "#888" }}>
             <strong>Tech:</strong> {props.tech}
@@ -36,6 +37,28 @@ function ProjectCards(props) {
             <CgWebsite /> &nbsp; Demo
           </Button>
         )}
+        {/* Buttons container */}
+        {/* <div
+          style={{
+            position: "absolute",
+            bottom: "10px",
+            left: "50%",
+            transform: "translateX(-50%)", // center horizontally
+            display: "flex",
+            gap: "10px",
+          }}
+        >
+          <Button variant="primary" href={props.ghLink} target="_blank">
+            <BsGithub /> &nbsp;
+            {props.isBlog ? "Blog" : "GitHub"}
+          </Button>
+
+          {!props.isBlog && props.demoLink && (
+            <Button variant="primary" href={props.demoLink} target="_blank">
+              <CgWebsite /> &nbsp; Demo
+            </Button>
+          )}
+        </div> */}
       </Card.Body>
     </Card>
   )

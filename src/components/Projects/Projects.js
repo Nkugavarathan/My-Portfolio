@@ -16,60 +16,68 @@ function Projects() {
           Here are some of the projects I've developed recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          {/* 1) E-Commerce Web Application */}
+          {/* 1. Ai career coach */}
           <Col md={4} className="project-card">
             <ProjectCard
               isBlog={false}
-              title="E-Commerce Web Application"
-              description="Developed a full-stack MERN e-commerce app with user login, product management, shopping cart, and admin dashboard. Integrated JWT authentication, and responsive UI."
+              title="AI Career Coach"
+              description="AI-powered platform generating resumes, cover letters, and mock interview questions. Features secure Clerk authentication, Prisma ORM, and automated reminders via n8n."
+              tech="Next.js, React, Tailwind CSS, Shadcn UI, Prisma ORM, Clerk, Gemini AI, Inngest, n8n"
+              ghLink="https://github.com/Nkugavarathan/AI-Career-Coach"
+            />
+          </Col>
+          {/* 2) VARA Fashion – Shopping Platform */}
+          <Col md={4} className="project-card">
+            <ProjectCard
+              isBlog={false}
+              title="VARA Fashion – Shopping Platform"
+              description="Full-stack MERN platform with user login, product management, shopping cart, admin dashboard, JWT auth, and responsive UI."
               tech="MongoDB, Express.js, React.js, Node.js, Tailwind CSS"
-              ghLink="https://github.com/Nkugavarathan/E-Commerce-website.git"
+              ghLink="https://github.com/Nkugavarathan/vara-fashion-ecommerce-mern"
+              demoLink="https://www.youtube.com/watch?v=hywZ-p3JLxE&feature=youtu.be"
             />
           </Col>
-
-          {/* 2) Full Stack AI Chatbot */}
+          {/* 3) AI Chatbot */}
           <Col md={4} className="project-card">
             <ProjectCard
               isBlog={false}
-              title="Full Stack AI Chatbot"
-              description="Built a MERN-based AI chatbot that generates text via Google Gemini and images via ImageKit. Added payment gateway for credit purchases, JWT authentication, and deployed as a SaaS product."
-              tech="MongoDB, Express.js, React.js, Node.js, ImageKit, OpenAI API"
-              ghLink="https://github.com/Nkugavarathan/ai-chatbot-mern.git"
+              title="AI Chatbot"
+              description="MERN-based AI chatbot with text & image generation, payment gateway, and JWT authentication."
+              tech="MongoDB, Express.js, React.js, Node.js, ImageKit, OpenAI API, Stripe"
+              ghLink="https://github.com/Nkugavarathan/ai-chatbot"
+              demoLink="https://chatwithmygpt.vercel.app/"
             />
           </Col>
-
-          {/* 3) Full Stack E-Commerce Website */}
+          {/* 4) CineBook - Movie & Event Ticket Booking Platform */}
           <Col md={4} className="project-card">
             <ProjectCard
               isBlog={false}
-              title="Full Stack E-Commerce Website"
-              description="Created a Next.js-based e-commerce platform with server-side rendering, integrated Clerk for authentication, and Inngest for background automation."
-              tech="Next.js, React.js, MongoDB, Tailwind CSS, Clerk, Inngest"
-              ghLink="https://github.com/Nkugavarathan/nextjs-ecommerce.git"
+              title="CineBook - Ticket Booking Platform"
+              description="Full-stack booking platform with movie/event listings, seat selection, admin dashboard, and Stripe payments."
+              tech="Java, Spring Boot, MySQL, React.js, Stripe"
+              ghLink="https://github.com/Nkugavarathan/cinebook-movie-event-booking"
             />
           </Col>
-
-          {/* 4) Smart School Management System */}
+          {/* 5) FitGenius - AI Fitness Tracker */}
           <Col md={4} className="project-card">
             <ProjectCard
               isBlog={false}
-              title="Smart School Management System"
+              title="FitGenius - AI Fitness Tracker"
+              description="Full-stack fitness app with AI-based tips, progress tracking, JWT authentication, and automated reminders via n8n."
+              tech="Java, Spring Boot, React.js, MySQL, Gemini AI API, n8n, TailwindCSS"
+              ghLink="https://github.com/Nkugavarathan/fitgenius-ai-fitness-tracker"
+            />
+          </Col>
+          {/* 4)  School Management System */}
+          {/* <Col md={4} className="project-card">
+            <ProjectCard
+              isBlog={false}
+              title=" School Management System"
               description="Developed a role-based web app for admins, teachers, students, and parents. Automated attendance, fee tracking, and academic records, with PDF reports and media sharing."
               tech="PHP, HTML, CSS, Bootstrap 5, JavaScript, MySQL, FPDF library"
               ghLink="https://github.com/Nkugavarathan/School-Management-System"
             />
-          </Col>
-
-          {/* 5) Movie Review Application */}
-          <Col md={4} className="project-card">
-            <ProjectCard
-              isBlog={false}
-              title="Movie Review Application"
-              description="Designed a full-stack web app where users can browse and review movies in real time. Built with clear separation of frontend and backend logic using modern frameworks."
-              tech="Java, Spring Boot, MongoDB, React"
-              ghLink="https://github.com/Nkugavarathan/movie-review-app"
-            />
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </Container>

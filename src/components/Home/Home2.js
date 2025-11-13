@@ -22,7 +22,7 @@ function Home2() {
               <h1 style={{ fontSize: "2.6em" }}>
                 LET ME <span className="irishblue"> INTRODUCE </span> MYSELF
               </h1>
-              <p className="home-about-body">
+              {/* <p className="home-about-body">
                 I’m a passionate developer who loves building modern web
                 applications and learning new technologies every day. 🚀
                 <br />I have solid experience in
@@ -43,9 +43,58 @@ function Home2() {
                 <i>
                   <b className="irishblue">AI & Cloud Technologies.</b>
                 </i>
-                <br />I enjoy creating products with{" "}
+                {/* <br />I enjoy creating products with{" "}
                 <b className="irishblue">React.js, Node.js, and Spring Boot</b>,
                 and designing systems that are both scalable and efficient.
+                </p>
+                */}
+
+              {/* <p className="home-about-body">
+                Motivated and detail-oriented 3rd-year BSc (Hons) Computing and
+                Information Systems undergraduate with hands-on experience in
+                full-stack development using{" "}
+                <b className="irishblue">
+                  MERN, Next.js, and Spring Boot, as well as AI-powered
+                  applications.{" "}
+                </b>{" "}
+                Skilled in Object-Oriented Programming (OOP), MVC architecture,
+                RESTful API design, and Data Structures & Algorithms (DSA).
+                <br />
+                Proven ability to build scalable web applications with secure
+                authentication, responsive interfaces, and efficient workflows.
+                Experienced in database management, cloud deployment (Vercel),
+                version control, Agile methodologies, and workflow automation
+                using n8n.
+                <br />
+                Passionate about delivering innovative, high-quality software
+                solutions in collaborative environments.
+              </p> */}
+              <p className="home-about-body">
+                Motivated and detail-oriented 3rd-year BSc (Hons) Computing and
+                Information Systems undergraduate with hands-on experience in
+                full-stack development using{" "}
+                <b className="irishblue">
+                  MERN, Next.js, Spring Boot, AI-powered applications
+                </b>
+                . Skilled in{" "}
+                <b className="irishblue">Object-Oriented Programming (OOP)</b>,{" "}
+                <b className="irishblue">MVC architecture</b>,
+                <b className="irishblue"> RESTful API design</b>, and{" "}
+                <b className="irishblue">Data Structures & Algorithms (DSA)</b>.
+                <br />
+                Proven ability to build{" "}
+                <b className="irishblue">scalable web applications</b> with{" "}
+                <b className="irishblue">secure authentication</b>,
+                <b className="irishblue"> responsive interfaces</b>, and{" "}
+                <b className="irishblue">efficient workflows</b>. Experienced in
+                <b className="irishblue"> database management</b>,{" "}
+                <b className="irishblue">cloud deployment (Vercel)</b>,{" "}
+                <b className="irishblue">version control</b>,
+                <b className="irishblue"> Agile methodologies</b>, and{" "}
+                <b className="irishblue">workflow automation using n8n</b>.
+                <br />
+                Passionate about delivering innovative, high-quality software
+                solutions in collaborative environments.
               </p>
             </motion.div>
           </Col>
