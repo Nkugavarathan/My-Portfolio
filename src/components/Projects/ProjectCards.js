@@ -21,13 +21,13 @@ function ProjectCards(props) {
             <strong>Tech:</strong> {props.tech}
           </Card.Text>
         )}
+        {props.ghLink && (
+          <Button variant="primary" href={props.ghLink} target="_blank">
+            <BsGithub /> &nbsp; Github
+          </Button>
+        )}
 
-        <Button variant="primary" href={props.ghLink} target="_blank">
-          <BsGithub /> &nbsp;
-          {props.isBlog ? "Blog" : "GitHub"}
-        </Button>
-
-        {!props.isBlog && props.demoLink && (
+        {props.demoLink && (
           <Button
             variant="primary"
             href={props.demoLink}
@@ -37,28 +37,6 @@ function ProjectCards(props) {
             <CgWebsite /> &nbsp; Demo
           </Button>
         )}
-        {/* Buttons container */}
-        {/* <div
-          style={{
-            position: "absolute",
-            bottom: "10px",
-            left: "50%",
-            transform: "translateX(-50%)", // center horizontally
-            display: "flex",
-            gap: "10px",
-          }}
-        >
-          <Button variant="primary" href={props.ghLink} target="_blank">
-            <BsGithub /> &nbsp;
-            {props.isBlog ? "Blog" : "GitHub"}
-          </Button>
-
-          {!props.isBlog && props.demoLink && (
-            <Button variant="primary" href={props.demoLink} target="_blank">
-              <CgWebsite /> &nbsp; Demo
-            </Button>
-          )}
-        </div> */}
       </Card.Body>
     </Card>
   )

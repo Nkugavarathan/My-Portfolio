@@ -500,6 +500,9 @@ button:focus {
   overflow: hidden !important;
   box-shadow: 0 4px 4px 5px rgba(0, 150, 190, 0.28) !important;
 }
+.project-container{
+  z-index:20;
+}
 
 .blog-card {
   padding-top: 50px !important;
@@ -760,4 +763,9 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.cursor-pointer {
+  cursor: pointer;
 }
