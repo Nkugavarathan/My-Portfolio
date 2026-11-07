@@ -10,6 +10,42 @@ function Projects() {
   const [visibleCount, setVisibleCount] = useState(5)
   const projects = [
     {
+      title: "CineBook - Movie & Event Booking Platform",
+      description:
+        "Full-stack booking platform with a customer site and admin portal: seat-map booking with Standard/Premium/VIP pricing, Stripe Checkout, promo codes, self-service refunds and emailed PDF tickets with QR-scan check-in. Prevents double booking under concurrent requests via unique constraints, pessimistic row locks and 10-minute seat holds, with verified, idempotent Stripe webhooks and role-based access.",
+      tech: "Java, Spring Boot, Spring Security, JWT, Spring Data JPA, MySQL, Stripe API, OpenPDF, ZXing, React.js, Tailwind CSS, Gemini API",
+      ghLink: "https://github.com/Nkugavarathan/cinebook-movie-event-booking",
+    },
+    {
+      title: "POS System - Supermarket Point of Sale",
+      description:
+        "POS and back-office system with a till interface (camera barcode scanning, cashier shifts, cash-drawer reconciliation), split cash/card/loyalty payments, returns, purchasing, stock counts and CSV reports. Idempotent all-or-nothing checkout with tax/promotion pricing, manager approval tokens and FEFO batch stock deduction with moving-average cost.",
+      tech: "Java, Spring Boot, Spring Security (JWT), Spring Data JPA, MySQL, Flyway, Bucket4j, JUnit 5, Next.js, React, Zustand, TanStack Query, ZXing, jsPDF, Recharts",
+      ghLink: "https://github.com/Nkugavarathan/POS-System",
+    },
+    {
+      title: "ConstructFlow - Construction Management System",
+      description:
+        "Multi-tenant construction management system covering projects, tasks, budgets, expense approvals, purchase orders, inventory, versioned documents, risks and safety incidents. 6-role RBAC, JWT with refresh-token rotation, approval workflows with optimistic locking and a transactional audit trail, covered by Testcontainers integration tests.",
+      tech: "Java, Spring Boot, Spring Security (JWT), Spring Data JPA, PostgreSQL, Flyway, JUnit 5, Testcontainers, Swagger/OpenAPI, Docker Compose, Next.js, React, TanStack Query, Zod, Recharts, Playwright",
+      ghLink: "https://github.com/Nkugavarathan/Construction-Management",
+    },
+    {
+      title: "AirportRide Lanka - Airport Transfer & Vehicle Rental Platform",
+      description:
+        "Trilingual (English, Sinhala, Tamil) vehicle rental and airport-transfer platform with place autocomplete, NIC-verified owner listings and a Google sign-in admin panel. Real-time trip tracking streams driver GPS via Server-Sent Events, with route recalculation and 90-day trail retention for complaint replay.",
+      tech: "Next.js 16, React 19, Tailwind CSS 4, Prisma, MySQL, Auth.js (Google OAuth), next-intl, Leaflet, Google Maps API, OpenRouteService, Nominatim, Sharp",
+      demoLink: "https://airportridelanka.com/en",
+      demoLabel: "Live",
+    },
+    {
+      title: "FitGenius - AI Fitness Tracker",
+      description:
+        "Full-stack fitness tracking system for managing workouts, goals and progress, with Gemini AI-powered personalized tips, motivation and a chat-based virtual trainer, JWT authentication and Recharts analytics dashboards.",
+      tech: "Java, Spring Boot, React.js, MySQL, Gemini AI API, Tailwind CSS",
+      ghLink: "https://github.com/Nkugavarathan/fitgenius-ai-fitness-tracker",
+    },
+    {
       title: "AI Career Coach",
       description:
         "AI-powered platform generating resumes, cover letters, and mock interview questions. Features secure Clerk authentication, Prisma ORM, and automated reminders via n8n.",
@@ -31,20 +67,6 @@ function Projects() {
       tech: "MongoDB, Express.js, React.js, Node.js, ImageKit, OpenAI API, Stripe",
       ghLink: "https://github.com/Nkugavarathan/ai-chatbot",
       demoLink: "https://chatwithmygpt.vercel.app/",
-    },
-    {
-      title: "CineBook - Ticket Booking Platform",
-      description:
-        "Full-stack booking platform with movie/event listings, seat selection, admin dashboard, and Stripe payments.",
-      tech: "Java, Spring Boot, MySQL, React.js, Stripe",
-      ghLink: "https://github.com/Nkugavarathan/cinebook-movie-event-booking",
-    },
-    {
-      title: "FitGenius - AI Fitness Tracker",
-      description:
-        "Full-stack fitness app with AI-based tips, progress tracking, JWT authentication, and automated reminders via n8n.",
-      tech: "Java, Spring Boot, React.js, MySQL, Gemini AI API, n8n, TailwindCSS",
-      ghLink: "https://github.com/Nkugavarathan/fitgenius-ai-fitness-tracker",
     },
     {
       title: "Nellai Styles – Fashion E-Commerce Website",
@@ -85,6 +107,7 @@ function Projects() {
                 tech={project.tech}
                 ghLink={project.ghLink}
                 demoLink={project.demoLink}
+                demoLabel={project.demoLabel}
               />
             </Col>
           ))}

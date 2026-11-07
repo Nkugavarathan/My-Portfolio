@@ -32,9 +32,9 @@ function ProjectCards(props) {
             variant="primary"
             href={props.demoLink}
             target="_blank"
-            style={{ marginLeft: "10px" }}
+            style={{ marginLeft: props.ghLink ? "10px" : 0 }}
           >
-            <CgWebsite /> &nbsp; Demo
+            <CgWebsite /> &nbsp; {props.demoLabel || "Demo"}
           </Button>
         )}
       </Card.Body>
