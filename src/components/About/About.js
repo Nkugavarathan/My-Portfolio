@@ -6,6 +6,7 @@ import Techstack from "./Techstack"
 import Aboutcard from "./AboutCard"
 import about from "../../Assets/about.png"
 import Toolstack from "./Toolstack"
+import Experience from "./Experience"
 import { motion } from "framer-motion"
 
 function About() {
@@ -50,6 +51,19 @@ function About() {
             </motion.div>
           </Col>
         </Row>
+        <h1 className="project-heading">
+          Work <strong className="irishblue">Experience</strong>
+        </h1>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: false, amount: 0.3 }}
+          style={{ marginBottom: "50px" }}
+        >
+          <Experience />
+        </motion.div>
+
         <h1 className="project-heading">
           Professional <strong className="irishblue">Skillset </strong>
         </h1>

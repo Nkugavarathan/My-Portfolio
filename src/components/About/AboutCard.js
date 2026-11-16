@@ -18,7 +18,7 @@ function AboutCard() {
             </b>
             at{" "}
             <b className="irishblue"> Sabaragamuwa University of Sri Lanka</b>{" "}
-            (3rd year).
+            (4th year).
             <br />
             <br />
             <b>Education</b>
