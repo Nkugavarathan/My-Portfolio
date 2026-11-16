@@ -50,7 +50,7 @@ function Home2() {
                 */}
 
               {/* <p className="home-about-body">
-                Motivated and detail-oriented 3rd-year BSc (Hons) Computing and
+                Motivated and detail-oriented 4th-year BSc (Hons) Computing and
                 Information Systems undergraduate with hands-on experience in
                 full-stack development using{" "}
                 <b className="irishblue">
@@ -70,7 +70,7 @@ function Home2() {
                 solutions in collaborative environments.
               </p> */}
               <p className="home-about-body">
-                Motivated and detail-oriented 3rd-year BSc (Hons) Computing and
+                Motivated and detail-oriented 4th-year BSc (Hons) Computing and
                 Information Systems undergraduate with hands-on experience in
                 full-stack development using{" "}
                 <b className="irishblue">
