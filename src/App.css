@@ -700,39 +700,8 @@ ul {
 }
 
 /* Experience timeline */
-.timeline {
-  position: relative;
-  padding-left: 36px;
-}
-
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 7px;
-  top: 8px;
-  bottom: 8px;
-  width: 2px;
-  background: linear-gradient(var(--accent), transparent);
-}
-
-.timeline-item {
-  position: relative;
-}
-
 .timeline-item + .timeline-item {
   margin-top: 28px;
-}
-
-.timeline-dot {
-  position: absolute;
-  left: -36px;
-  top: 30px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--bg);
-  border: 3px solid var(--accent);
-  box-shadow: 0 0 0 6px var(--accent-soft);
 }
 
 .job-head {
@@ -1145,12 +1114,6 @@ ul {
   .card,
   .edu-list {
     padding: 22px;
-  }
-  .timeline {
-    padding-left: 28px;
-  }
-  .timeline-dot {
-    left: -28px;
   }
   .contact-card {
     padding: 52px 20px;

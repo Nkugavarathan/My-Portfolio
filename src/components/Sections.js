@@ -55,7 +55,6 @@ export function Experience() {
       <div className="timeline">
         {experience.map((job) => (
           <Reveal key={job.role + job.company} className="timeline-item">
-            <span className="timeline-dot" aria-hidden="true" />
             <div className="card job-card">
               <div className="job-head">
                 <div>
