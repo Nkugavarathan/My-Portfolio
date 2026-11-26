@@ -97,7 +97,7 @@ ul {
 .about-grid > *,
 .featured-grid > *,
 .mini-grid > *,
-.skills-grid > *,
+.skill-row > *,
 .highlights-grid > *,
 .timeline-item {
   min-width: 0;
@@ -465,31 +465,37 @@ ul {
   position: relative;
   justify-self: center;
   width: 100%;
-  max-width: 400px;
-  aspect-ratio: 1 / 1.05;
+  max-width: 420px;
+  aspect-ratio: 1 / 1.15;
 }
 
+/* Solid blob the cut-out photo stands in front of */
 .blob-back {
   position: absolute;
-  inset: 6% -4% -2% 8%;
+  inset: 24% 2% 0 2%;
   background: var(--blob);
-  animation: morph 14s ease-in-out infinite reverse;
-}
-
-.blob-photo {
-  position: absolute;
-  inset: 0 6% 6% 0;
-  overflow: hidden;
-  background: var(--bg-elev);
-  box-shadow: var(--shadow);
   animation: morph 14s ease-in-out infinite;
 }
 
-.blob-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 20%;
+/* Thin outline blob, slightly offset, for depth */
+.blob-ring {
+  position: absolute;
+  inset: 18% -4% 4% 6%;
+  border: 1px solid rgba(126, 162, 255, 0.35);
+  animation: morph 18s ease-in-out infinite reverse;
+}
+
+.hero-photo {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 112%;
+  max-width: none;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.45));
+  /* Fade the waist cut-off into the blob */
+  -webkit-mask-image: linear-gradient(to bottom, #000 84%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 84%, transparent 100%);
 }
 
 .stats {
@@ -851,19 +857,95 @@ ul {
 }
 
 /* Skills */
-.skills-grid {
+.skills-panel {
+  padding: 8px 28px;
+}
+
+.skills-panel:hover {
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+.skill-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  grid-template-columns: 130px 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 22px 0;
 }
 
-.skill-card {
-  padding: 24px;
+.skill-row + .skill-row {
+  border-top: 1px solid var(--border);
 }
 
-.skill-card .chip {
-  font-size: 13px;
+.skill-group {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-soft);
+}
+
+.tech-grid {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 86px;
+  height: 82px;
+  padding: 8px 6px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  text-align: center;
+  transition: border-color 0.25s ease, background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.tech-tile span {
+  font-size: 11.5px;
+  line-height: 1.25;
+  color: var(--text-soft);
+}
+
+.tech-icon {
+  font-size: 26px;
   color: var(--text);
+  transition: color 0.25s ease;
+}
+
+.tech-tile:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-strong);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.tech-tile:hover .tech-icon {
+  color: var(--brand, var(--text));
+}
+
+.tech-tile.text-only {
+  width: auto;
+  min-width: 86px;
+  padding: 8px 14px;
+}
+
+.tech-tile.text-only span {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.practices {
+  font-size: 15px;
+  color: var(--text-soft);
+  white-space: pre-wrap;
 }
 
 .github-card {
@@ -979,15 +1061,8 @@ ul {
    Responsive
    ========================================================== */
 @media (max-width: 1024px) {
-  .mini-grid,
-  .skills-grid {
+  .mini-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-  .card-top {
-    left: -6%;
-  }
-  .card-bottom {
-    right: -6%;
   }
 }
 
@@ -1057,15 +1132,30 @@ ul {
   .section {
     padding: 80px 0;
   }
+  .skill-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
 }
 
 @media (max-width: 600px) {
   .container {
     padding: 0 16px;
   }
-  .mini-grid,
-  .skills-grid {
+  .mini-grid {
     grid-template-columns: 1fr;
+  }
+  .skills-panel {
+    padding: 4px 18px;
+  }
+  .tech-grid {
+    gap: 8px;
+  }
+  .tech-tile,
+  .tech-tile.text-only {
+    min-width: 0;
+    width: calc((100% - 16px) / 3);
+    height: 78px;
   }
   .stats {
     grid-template-columns: 1fr;

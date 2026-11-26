@@ -155,28 +155,26 @@ export const projects = [
 ]
 
 export const skills = [
-  { group: "Languages", items: ["Java", "JavaScript", "PHP", "SQL"] },
   {
-    group: "Backend & Security",
-    items: ["Spring Boot", "Spring Security", "Spring Data JPA (Hibernate)", "Node.js", "Express.js", "JWT", "REST APIs"],
+    group: "Backend",
+    items: ["Java", "Spring Boot", "Spring Security", "Hibernate / JPA", "Node.js", "Express.js", "JWT", "PHP", "REST APIs"],
   },
   {
     group: "Frontend",
-    items: ["React", "Next.js", "Redux Toolkit", "Tailwind CSS", "Bootstrap", "SASS", "HTML", "CSS"],
+    items: ["JavaScript", "React", "Next.js", "Redux Toolkit", "Tailwind CSS", "Bootstrap", "SASS", "HTML", "CSS"],
   },
-  { group: "Databases", items: ["MySQL", "PostgreSQL", "MongoDB", "Flyway"] },
-  { group: "Testing & Automation", items: ["JUnit 5", "Testcontainers", "Jest", "Playwright", "n8n"] },
-  { group: "Cloud & DevOps", items: ["Docker", "Docker Compose", "Git", "GitHub", "Vercel"] },
-  { group: "Integrations", items: ["Stripe API", "Google Gemini API"] },
+  { group: "Databases", items: ["MySQL", "PostgreSQL", "MongoDB", "Flyway", "SQL"] },
   {
-    group: "Tools",
-    items: ["IntelliJ IDEA", "VS Code", "Eclipse", "Postman", "Swagger / OpenAPI", "Figma", "WordPress"],
+    group: "Testing & DevOps",
+    items: ["JUnit 5", "Testcontainers", "Jest", "Playwright", "Docker", "Git", "GitHub", "Vercel", "n8n"],
   },
   {
-    group: "Practices",
-    items: ["OOP", "Design Patterns", "MVC", "Layered Architecture", "DSA", "Agile"],
+    group: "Tools & APIs",
+    items: ["IntelliJ IDEA", "VS Code", "Eclipse", "Postman", "Swagger", "Figma", "WordPress", "Stripe", "Gemini API"],
   },
 ]
+
+export const practices = ["OOP", "Design Patterns", "MVC", "Layered Architecture", "Data Structures & Algorithms", "Agile"]
 
 export const achievements = [
   "Semi-Finalist, HackX 8.0 (2023), University of Kelaniya",

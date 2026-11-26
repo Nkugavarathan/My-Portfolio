@@ -17,10 +17,12 @@ import {
   experience,
   projects,
   skills,
+  practices,
   achievements,
   leadership,
   certifications,
 } from "../data/portfolio"
+import { techIcons } from "./techIcons"
 
 export function About() {
   return (
@@ -180,17 +182,32 @@ export function Projects() {
 export function Skills() {
   return (
     <Section id="skills" eyebrow="04" title="Skills & tools">
-      <div className="skills-grid">
-        {skills.map((s, i) => (
-          <Reveal key={s.group} delay={(i % 3) * 0.06} className="card skill-card">
-            <h3 className="card-label">{s.group}</h3>
-            <div className="chip-row">
-              {s.items.map((item) => (
-                <Chip key={item}>{item}</Chip>
-              ))}
-            </div>
+      <div className="card skills-panel">
+        {skills.map((s) => (
+          <Reveal key={s.group} className="skill-row">
+            <h3 className="skill-group">{s.group}</h3>
+            <ul className="tech-grid">
+              {s.items.map((item) => {
+                const entry = techIcons[item]
+                const Icon = entry && entry[0]
+                return (
+                  <li
+                    key={item}
+                    className={`tech-tile ${Icon ? "" : "text-only"}`}
+                    style={entry ? { "--brand": entry[1] } : undefined}
+                  >
+                    {Icon && <Icon aria-hidden="true" className="tech-icon" />}
+                    <span>{item}</span>
+                  </li>
+                )
+              })}
+            </ul>
           </Reveal>
         ))}
+        <Reveal className="skill-row">
+          <h3 className="skill-group">Practices</h3>
+          <p className="practices">{practices.join("  ·  ")}</p>
+        </Reveal>
       </div>
 
       <Reveal className="card github-card">

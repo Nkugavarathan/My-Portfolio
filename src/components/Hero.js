@@ -4,7 +4,7 @@ import { FiArrowRight, FiGithub, FiLinkedin, FiMail, FiMapPin } from "react-icon
 import { FaWhatsapp } from "react-icons/fa"
 import { CvButton } from "./ui"
 import { profile, stats } from "../data/portfolio"
-import photo from "../Assets/profile.jpg"
+import photo from "../Assets/profile-cutout.png"
 
 const fade = (delay) => ({
   initial: { opacity: 0, y: 16 },
@@ -78,9 +78,8 @@ function Hero() {
           transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="blob-back" aria-hidden="true" />
-          <div className="blob-photo">
-            <img src={photo} alt={profile.name} />
-          </div>
+          <div className="blob-ring" aria-hidden="true" />
+          <img className="hero-photo" src={photo} alt={profile.name} />
         </motion.div>
       </div>
 
