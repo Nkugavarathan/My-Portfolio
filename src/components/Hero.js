@@ -28,7 +28,7 @@ function Hero() {
         <div className="hero-copy">
           <motion.p className="status-pill" {...fade(0)}>
             <span className="status-dot" />
-            Available for Software Engineering roles
+            Open to Software Engineer &amp; Full-Stack Developer roles
           </motion.p>
 
           <motion.h1 className="hero-title" {...fade(0.08)}>

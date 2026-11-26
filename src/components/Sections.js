@@ -272,11 +272,24 @@ export function Highlights() {
           <h3 className="card-label">
             <FiCheckCircle aria-hidden="true" /> Certifications
           </h3>
-          <div className="chip-row">
+          <ul className="cert-grid">
             {certifications.map((c) => (
-              <Chip key={c}>{c}</Chip>
+              <li key={c.name}>
+                <a
+                  className="cert-link"
+                  href={c.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span className="cert-text">
+                    <span className="cert-name">{c.name}</span>
+                    <span className="cert-issuer">{c.issuer}</span>
+                  </span>
+                  <FiArrowUpRight aria-hidden="true" className="cert-arrow" />
+                </a>
+              </li>
             ))}
-          </div>
+          </ul>
         </Reveal>
       </div>
     </Section>

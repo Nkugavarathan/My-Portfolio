@@ -15,7 +15,7 @@ export const profile = {
   email: "kugavarathan28@gmail.com",
   phone: "+94 77 501 9192",
   tagline:
-    "I build **secure, reliable web applications**, from **Spring Boot APIs** and relational databases to clean **React and Next.js** interfaces.",
+    "I build **secure, reliable web applications** with **Java & Spring Boot**, the **MERN stack**, **Next.js** and **PHP**.",
   summary: [
     "I'm a **4th-year BSc (Hons) Computing and Information Systems** undergraduate at Sabaragamuwa University of Sri Lanka, with a strong interest in **backend software development**.",
     "I work mainly with **Java and Spring Boot**, **OOP**, **data structures & algorithms**, **design patterns**, **RESTful APIs** and relational databases (**MySQL, PostgreSQL**). I test my work at every level with **JUnit 5, Testcontainers and Playwright**, and ship with **Git, Docker and Agile** practices.",
@@ -190,14 +190,54 @@ export const leadership = [
 ]
 
 export const certifications = [
-  "Fundamentals of Java Programming",
-  "Building Applications with Spring Boot and MVC Architecture",
-  "Java Data Structures & Algorithms + LeetCode",
-  "Postman API Fundamentals Student Expert",
-  "SQL (Intermediate)",
-  "JavaScript Essential",
-  "React",
-  "Introduction to MERN",
-  "Getting Started with Git and GitHub",
-  "Introduction to AI",
+  {
+    name: "Fundamentals of Java Programming",
+    issuer: "Coursera",
+    url: "https://www.coursera.org/account/accomplishments/verify/L4T9FGZ3RXPT",
+  },
+  {
+    name: "Building Applications with Spring Boot and MVC Architecture",
+    issuer: "Coursera",
+    url: "https://www.coursera.org/account/accomplishments/verify/XSCZWP6ZVSTQ",
+  },
+  {
+    name: "Java Data Structures & Algorithms + LeetCode Exercises",
+    issuer: "Udemy",
+    url: "https://www.udemy.com/certificate/UC-cfd4383f-fdeb-468f-815e-77e78c32bc58/",
+  },
+  {
+    name: "React (Basic)",
+    issuer: "HackerRank",
+    url: "https://www.hackerrank.com/certificates/iframe/b757c7bbb447",
+  },
+  {
+    name: "Introduction to MERN Stack",
+    issuer: "Simplilearn",
+    url: "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIzMzM3IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvOTEwNjM3OF80MDMwMzY1MTc1OTY5NzIyMzI3Ni5wbmciLCJ1c2VybmFtZSI6Imt1Z2F2YXJhdGhhbiBOIn0%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F6129%2FIntroduction-to-MERN-Stack%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1654353582363988170&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVDzbMyYhyNrJIiUiyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUA96Qsuj8AAAA%3D",
+  },
+  {
+    name: "Postman API Fundamentals Student Expert",
+    issuer: "Postman",
+    url: "https://badges.parchment.com/public/assertions/1sPYUPz_Tsy21W37zKlsdg",
+  },
+  {
+    name: "JavaScript Essentials",
+    issuer: "Credly",
+    url: "https://www.credly.com/badges/2a254b59-cf59-43ee-bdd4-61964b7783e5/linked_in_profile",
+  },
+  {
+    name: "SQL (Intermediate)",
+    issuer: "HackerRank",
+    url: "https://www.hackerrank.com/certificates/ba0830be99fe",
+  },
+  {
+    name: "Getting Started with Git and GitHub",
+    issuer: "Coursera",
+    url: "https://www.coursera.org/account/accomplishments/verify/TC2YJ5JNNRQP",
+  },
+  {
+    name: "Introduction to AI",
+    issuer: "Coursera",
+    url: "https://www.coursera.org/account/accomplishments/verify/D3YUG6RAIKD9",
+  },
 ]
