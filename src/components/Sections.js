@@ -23,6 +23,7 @@ import {
   certifications,
 } from "../data/portfolio"
 import { techIcons } from "./techIcons"
+import { useTheme } from "../theme"
 
 export function About() {
   return (
@@ -189,7 +190,13 @@ export function Projects() {
   )
 }
 
+const calendarThemes = {
+  dark: { level0: "#1a2233", level1: "#1e2f6b", level2: "#2c4bb0", level3: "#4a74f2", level4: "#9db8ff" },
+  light: { level0: "#e8ebf2", level1: "#bfcffb", level2: "#86a5f5", level3: "#4a74f2", level4: "#2447b8" },
+}
+
 export function Skills() {
+  const { theme } = useTheme()
   return (
     <Section id="skills" eyebrow="04" title="Skills & tools">
       <div className="card skills-panel">
@@ -230,13 +237,7 @@ export function Skills() {
             blockSize={12}
             blockMargin={4}
             fontSize={13}
-            theme={{
-              level0: "#1a2233",
-              level1: "#1e2f6b",
-              level2: "#2c4bb0",
-              level3: "#4a74f2",
-              level4: "#9db8ff",
-            }}
+            theme={calendarThemes[theme]}
           />
         </div>
       </Reveal>

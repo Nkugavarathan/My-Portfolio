@@ -16,6 +16,17 @@
       property="og:description"
       content="Backend-focused full-stack developer: Java, Spring Boot, React, Next.js. See projects, experience and download my CV."
     />
+    <script>
+      // Apply saved or system theme before first paint to avoid a flash
+      (function () {
+        var t = null
+        try { t = localStorage.getItem("theme") } catch (e) {}
+        if (t !== "light" && t !== "dark") {
+          t = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"
+        }
+        document.documentElement.setAttribute("data-theme", t)
+      })()
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

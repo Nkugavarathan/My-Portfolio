@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
-import { FiMenu, FiX } from "react-icons/fi"
+import { FiMenu, FiMoon, FiSun, FiX } from "react-icons/fi"
 import { CvButton } from "./ui"
+import { useTheme } from "../theme"
 import { profile } from "../data/portfolio"
 
 const links = [
@@ -15,6 +16,7 @@ function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState("")
+  const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12)
@@ -68,6 +70,14 @@ function Navbar() {
         </nav>
 
         <div className="nav-actions">
+          <button
+            className="theme-toggle"
+            onClick={toggleTheme}
+            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+            title={theme === "dark" ? "Light mode" : "Dark mode"}
+          >
+            {theme === "dark" ? <FiSun /> : <FiMoon />}
+          </button>
           <div className="nav-cv-desktop">
             <CvButton variant="ghost" label="Resume" />
           </div>

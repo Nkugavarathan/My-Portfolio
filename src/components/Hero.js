@@ -1,5 +1,5 @@
-import React from "react"
-import { motion } from "framer-motion"
+import React, { useEffect, useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
 import { FiArrowRight, FiGithub, FiLinkedin, FiMail, FiMapPin } from "react-icons/fi"
 import { FaWhatsapp } from "react-icons/fa"
 import { CvButton, Rich } from "./ui"
@@ -19,6 +19,37 @@ export const socialLinks = [
   { href: profile.socials.whatsapp, label: "WhatsApp", icon: <FaWhatsapp /> },
 ]
 
+const openRoles = ["Software Engineer", "Full-Stack Developer"]
+
+// Cycles through openRoles one at a time with a short slide/fade.
+function RotatingRole() {
+  const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    const id = setInterval(
+      () => setIndex((i) => (i + 1) % openRoles.length),
+      2600
+    )
+    return () => clearInterval(id)
+  }, [])
+
+  return (
+    <span className="rotating-role">
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.strong
+          key={openRoles[index]}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -8 }}
+          transition={{ duration: 0.3 }}
+        >
+          {openRoles[index]}
+        </motion.strong>
+      </AnimatePresence>
+    </span>
+  )
+}
+
 function Hero() {
   return (
     <section id="home" className="hero">
@@ -28,7 +59,9 @@ function Hero() {
         <div className="hero-copy">
           <motion.p className="status-pill" {...fade(0)}>
             <span className="status-dot" />
-            Open to Software Engineer &amp; Full-Stack Developer roles
+            <span>
+              Open to <RotatingRole /> roles
+            </span>
           </motion.p>
 
           <motion.h1 className="hero-title" {...fade(0.08)}>
