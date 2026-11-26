@@ -107,13 +107,13 @@ module.exports = async function handler(req, res) {
       subject: "Thank you for reaching out",
       text:
         `Hi ${name},\n\n` +
-        `Thank you for getting in touch. I've received your message and will get back to you as soon as possible, usually within 1–2 working days.\n\n` +
+        `Thank you for getting in touch. I've received your message and will get back to you as soon as possible, usually within 1 working day.\n\n` +
         `In the meantime, you can see my work at https://nkugavarathan.vercel.app or on GitHub: https://github.com/Nkugavarathan\n\n` +
         `Best regards,\nKugavarathan Navaraththinarasa\nSoftware Engineer`,
       html: `
         <div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.6;color:#1e293b">
           <p>Hi ${escapeHtml(name)},</p>
-          <p>Thank you for getting in touch. I've received your message and will get back to you as soon as possible, usually within 1–2 working days.</p>
+          <p>Thank you for getting in touch. I've received your message and will get back to you as soon as possible, usually within 1 working day.</p>
           <p>In the meantime, you can see my work on my
           <a href="https://nkugavarathan.vercel.app">portfolio</a> or
           <a href="https://github.com/Nkugavarathan">GitHub</a>.</p>

@@ -199,7 +199,7 @@ export function Contact() {
               <p className="section-intro">
                 Have a <strong className="hl">job opportunity</strong>, a{" "}
                 <strong className="hl">project</strong> or a question? Send me a
-                message and I'll get back to you within 1 working days.
+                message and I'll get back to you within 1 working day.
               </p>
               <div className="contact-details">
                 <a href={profile.socials.email}>
