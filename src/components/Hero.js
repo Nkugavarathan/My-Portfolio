@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { FiArrowRight, FiGithub, FiLinkedin, FiMail, FiMapPin } from "react-icons/fi"
 import { FaWhatsapp } from "react-icons/fa"
+import { SiHackerrank, SiMedium } from "react-icons/si"
 import { CvButton, Rich } from "./ui"
 import { profile, stats } from "../data/portfolio"
 import photo from "../Assets/profile-cutout.png"
@@ -15,6 +16,8 @@ const fade = (delay) => ({
 export const socialLinks = [
   { href: profile.socials.github, label: "GitHub", icon: <FiGithub /> },
   { href: profile.socials.linkedin, label: "LinkedIn", icon: <FiLinkedin /> },
+  { href: profile.socials.hackerrank, label: "HackerRank", icon: <SiHackerrank /> },
+  { href: profile.socials.medium, label: "Medium", icon: <SiMedium /> },
   { href: profile.socials.email, label: "Email", icon: <FiMail /> },
   { href: profile.socials.whatsapp, label: "WhatsApp", icon: <FaWhatsapp /> },
 ]

@@ -25,6 +25,8 @@ export const profile = {
     github: "https://github.com/Nkugavarathan",
     linkedin:
       "https://www.linkedin.com/in/kugavarathan-navaraththinarasa-7ab094267/",
+    hackerrank: "https://www.hackerrank.com/profile/kugavarathan28",
+    medium: "https://medium.com/@kugavarathan28",
     whatsapp: "https://wa.me/94775019192",
     email: "mailto:kugavarathan28@gmail.com",
   },
@@ -76,6 +78,7 @@ export const projects = [
       "Stops **double booking under concurrent requests** using unique constraints, **pessimistic row locks** and 10-minute seat holds. Payments are confirmed by verified, **idempotent Stripe webhooks**.",
     tech: ["Java", "Spring Boot", "Spring Security", "JWT", "MySQL", "Stripe", "React", "Tailwind CSS"],
     github: "https://github.com/Nkugavarathan/cinebook-movie-event-booking",
+    demo: "https://www.youtube.com/watch?v=LITXaPwDpKU",
   },
   {
     title: "POS System",
@@ -117,6 +120,7 @@ export const projects = [
       "Fitness tracking for workouts, goals and progress, with **Gemini AI** tips, motivation and a **chat-based virtual trainer**. Includes JWT auth and Recharts dashboards.",
     tech: ["Java", "Spring Boot", "React", "MySQL", "Gemini AI", "Tailwind CSS"],
     github: "https://github.com/Nkugavarathan/fitgenius-ai-fitness-tracker",
+    demo: "https://www.youtube.com/watch?v=E2mUAchtv0Y",
   },
   {
     title: "VARA Fashion",
