@@ -49,7 +49,11 @@ module.exports = async function handler(req, res) {
   const message = String(body.message || "").trim().slice(0, 5000)
 
   // Honeypot: real visitors never fill this hidden field
-  if (body.company) return res.status(200).json({ ok: true })
+  // (named "botcheck" so browser autofill never fills it for real users)
+  if (body.botcheck) {
+    console.warn("contact: honeypot filled, ignoring submission")
+    return res.status(200).json({ ok: true })
+  }
 
   if (!name || !EMAIL_RE.test(email) || !subject || !message) {
     return res.status(400).json({
@@ -81,7 +85,7 @@ module.exports = async function handler(req, res) {
 
   try {
     // 1) The enquiry, to you. Reply-To is the visitor so you can answer directly.
-    await transporter.sendMail({
+    const toMeInfo = await transporter.sendMail({
       from,
       to,
       replyTo: { name, address: email },
@@ -96,7 +100,7 @@ module.exports = async function handler(req, res) {
 
     // 2) Fixed auto-reply to the visitor. It deliberately does not repeat their
     //    subject or message, so the form can't be abused to send arbitrary text to others.
-    await transporter.sendMail({
+    const replyInfo = await transporter.sendMail({
       from,
       to: email,
       replyTo: to,
@@ -117,6 +121,13 @@ module.exports = async function handler(req, res) {
         </div>`,
     })
 
+    console.log("contact: sent", {
+      to,
+      enquiry: toMeInfo.messageId,
+      accepted: toMeInfo.accepted,
+      autoReply: replyInfo.messageId,
+      autoReplyAccepted: replyInfo.accepted,
+    })
     return res.status(200).json({ ok: true })
   } catch (err) {
     console.error("contact: send failed", err && err.message)

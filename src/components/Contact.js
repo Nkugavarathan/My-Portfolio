@@ -1,4 +1,5 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
 import {
   FiAlertCircle,
   FiArrowUp,
@@ -7,6 +8,7 @@ import {
   FiMapPin,
   FiPhone,
   FiSend,
+  FiX,
 } from "react-icons/fi"
 import { Reveal, CvButton } from "./ui"
 import { socialLinks } from "./Hero"
@@ -17,7 +19,7 @@ const emptyForm = {
   email: "",
   subject: "",
   message: "",
-  company: "", // honeypot
+  botcheck: "", // honeypot
 }
 
 function ContactForm() {
@@ -44,7 +46,7 @@ function ContactForm() {
       setStatus({
         state: "sent",
         message:
-          "Thanks! Your message has been sent. A confirmation email is on its way to you.",
+          "Thanks for reaching out. I'll get back to you soon. A confirmation email is on its way to you.",
       })
     } catch (err) {
       setStatus({
@@ -58,6 +60,18 @@ function ContactForm() {
   }
 
   const sending = status.state === "sending"
+  const showPopup = status.state === "sent" || status.state === "error"
+  const closePopup = () => setStatus({ state: "idle", message: "" })
+
+  // Auto-hide the popup: success after 4s, errors after 6s (more to read)
+  useEffect(() => {
+    if (!showPopup) return
+    const id = setTimeout(
+      () => setStatus({ state: "idle", message: "" }),
+      status.state === "sent" ? 4000 : 6000
+    )
+    return () => clearTimeout(id)
+  }, [showPopup, status.state])
 
   return (
     <form className="contact-form" onSubmit={submit}>
@@ -118,8 +132,8 @@ function ContactForm() {
       <input
         className="hp"
         type="text"
-        name="company"
-        value={form.company}
+        name="botcheck"
+        value={form.botcheck}
         onChange={update}
         tabIndex={-1}
         autoComplete="off"
@@ -130,16 +144,44 @@ function ContactForm() {
         <FiSend aria-hidden="true" /> {sending ? "Sending..." : "Send message"}
       </button>
 
-      {status.message && (
-        <p className={`form-status ${status.state}`} role="status">
-          {status.state === "sent" ? (
-            <FiCheckCircle aria-hidden="true" />
-          ) : (
-            <FiAlertCircle aria-hidden="true" />
-          )}
-          {status.message}
-        </p>
-      )}
+      <AnimatePresence>
+        {showPopup && (
+          <motion.div
+            className="form-popup-backdrop"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            onClick={closePopup}
+          >
+            <motion.div
+              className={`form-popup ${status.state}`}
+              role={status.state === "error" ? "alert" : "status"}
+              initial={{ opacity: 0, scale: 0.9, y: 10 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                type="button"
+                className="form-popup-close"
+                onClick={closePopup}
+                aria-label="Close"
+              >
+                <FiX />
+              </button>
+              <span className="form-popup-icon">
+                {status.state === "sent" ? <FiCheckCircle /> : <FiAlertCircle />}
+              </span>
+              <strong>
+                {status.state === "sent" ? "Message sent!" : "Message not sent"}
+              </strong>
+              <p>{status.message}</p>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </form>
   )
 }
