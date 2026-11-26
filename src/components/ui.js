@@ -46,6 +46,21 @@ export function CvButton({ variant = "primary", label = "Download CV" }) {
   )
 }
 
+// Renders text with **double-asterisk** parts highlighted, so skimmers catch key terms.
+export function Rich({ text }) {
+  return text
+    .split(/(\*\*[^*]+\*\*)/g)
+    .map((part, i) =>
+      part.startsWith("**") && part.endsWith("**") ? (
+        <strong key={i} className="hl">
+          {part.slice(2, -2)}
+        </strong>
+      ) : (
+        <React.Fragment key={i}>{part}</React.Fragment>
+      )
+    )
+}
+
 export function Chip({ children }) {
   return <span className="chip">{children}</span>
 }

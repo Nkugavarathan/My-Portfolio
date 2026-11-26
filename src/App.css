@@ -92,6 +92,16 @@ ul {
   font-family: var(--mono);
 }
 
+/* Highlighted key terms for skim readers */
+.hl {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.about-text p:first-child .hl {
+  color: var(--accent);
+}
+
 /* Let grid/flex children shrink instead of overflowing on small screens */
 .hero-inner > *,
 .about-grid > *,
@@ -325,8 +335,8 @@ ul {
    ========================================================== */
 .hero {
   position: relative;
-  min-height: min(100vh, 980px);
-  padding: calc(var(--nav-h) + 72px) 0 72px;
+  min-height: min(100vh, 900px);
+  padding: calc(var(--nav-h) + 64px) 0 32px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -501,7 +511,7 @@ ul {
 .stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-top: 72px;
+  margin-top: 56px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--surface);
@@ -534,13 +544,13 @@ ul {
    Sections & cards
    ========================================================== */
 .section {
-  padding: 110px 0;
+  padding: 64px 0;
   position: relative;
 }
 
 .section-head {
   max-width: 680px;
-  margin-bottom: 52px;
+  margin-bottom: 32px;
 }
 
 .eyebrow {
@@ -829,7 +839,7 @@ ul {
 }
 
 .subhead {
-  margin: 64px 0 22px;
+  margin: 44px 0 20px;
 }
 
 .subhead h3 {
@@ -1130,7 +1140,7 @@ ul {
     grid-template-columns: 1fr;
   }
   .section {
-    padding: 80px 0;
+    padding: 48px 0;
   }
   .skill-row {
     grid-template-columns: 1fr;

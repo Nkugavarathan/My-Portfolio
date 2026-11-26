@@ -2,7 +2,7 @@ import React from "react"
 import { motion } from "framer-motion"
 import { FiArrowRight, FiGithub, FiLinkedin, FiMail, FiMapPin } from "react-icons/fi"
 import { FaWhatsapp } from "react-icons/fa"
-import { CvButton } from "./ui"
+import { CvButton, Rich } from "./ui"
 import { profile, stats } from "../data/portfolio"
 import photo from "../Assets/profile-cutout.png"
 
@@ -40,7 +40,7 @@ function Hero() {
           </motion.p>
 
           <motion.p className="hero-tagline" {...fade(0.2)}>
-            {profile.tagline}
+            <Rich text={profile.tagline} />
           </motion.p>
 
           <motion.div className="hero-cta" {...fade(0.28)}>

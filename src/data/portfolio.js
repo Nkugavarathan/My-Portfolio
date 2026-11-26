@@ -15,11 +15,11 @@ export const profile = {
   email: "kugavarathan28@gmail.com",
   phone: "+94 77 501 9192",
   tagline:
-    "I build secure, reliable web applications, from Spring Boot APIs and relational databases to clean React and Next.js interfaces.",
+    "I build **secure, reliable web applications**, from **Spring Boot APIs** and relational databases to clean **React and Next.js** interfaces.",
   summary: [
-    "I'm a 4th-year BSc (Hons) Computing and Information Systems undergraduate at Sabaragamuwa University of Sri Lanka, with a strong interest in backend software development.",
-    "I work mainly with Java and Spring Boot, OOP, data structures & algorithms, design patterns, RESTful APIs and relational databases (MySQL, PostgreSQL). I test my work at every level with JUnit 5, Testcontainers and Playwright, and ship with Git, Docker and Agile practices.",
-    "I'm analytical, resilient and collaborative, and I'm curious about data and financial technology.",
+    "I'm a **4th-year BSc (Hons) Computing and Information Systems** undergraduate at Sabaragamuwa University of Sri Lanka, with a strong interest in **backend software development**.",
+    "I work mainly with **Java and Spring Boot**, **OOP**, **data structures & algorithms**, **design patterns**, **RESTful APIs** and relational databases (**MySQL, PostgreSQL**). I test my work at every level with **JUnit 5, Testcontainers and Playwright**, and ship with **Git, Docker and Agile** practices.",
+    "I'm **analytical, resilient and collaborative**, and I'm curious about **data and financial technology**.",
   ],
   socials: {
     github: "https://github.com/Nkugavarathan",
@@ -43,10 +43,10 @@ export const experience = [
     period: "Dec 2025 – May 2026",
     duration: "6 months",
     points: [
-      "Developed and customised WordPress and Next.js, React and Tailwind CSS websites for car rental clients, including reusable components, API integration, SEO and deployment.",
-      "Built a booking engine and integrated its frontend with ASP.NET Core APIs.",
-      "Contributed to a Next.js and Supabase platform, a RAG-based AI chatbot using the Gemini API, and an AI-powered blog CMS (Next.js, Express.js, Firebase).",
-      "Assisted with PHP CRM API integration, and tested and debugged applications.",
+      "Developed and customised **WordPress and Next.js, React and Tailwind CSS** websites for car rental clients, including reusable components, **API integration, SEO and deployment**.",
+      "Built a **booking engine** and integrated its frontend with **ASP.NET Core APIs**.",
+      "Contributed to a **Next.js and Supabase** platform, a **RAG-based AI chatbot** using the Gemini API, and an **AI-powered blog CMS** (Next.js, Express.js, Firebase).",
+      "Assisted with **PHP CRM API integration**, and **tested and debugged** applications.",
     ],
     tags: ["Next.js", "React", "Tailwind CSS", "WordPress", "ASP.NET Core APIs", "Supabase", "Gemini API", "Firebase"],
   },
@@ -73,7 +73,7 @@ export const projects = [
     description:
       "Customer site and admin portal with seat-map booking (Standard/Premium/VIP), Stripe Checkout, promo codes, self-service refunds and emailed PDF tickets with QR check-in.",
     highlight:
-      "Stops double booking under concurrent requests using unique constraints, pessimistic row locks and 10-minute seat holds. Payments are confirmed by verified, idempotent Stripe webhooks.",
+      "Stops **double booking under concurrent requests** using unique constraints, **pessimistic row locks** and 10-minute seat holds. Payments are confirmed by verified, **idempotent Stripe webhooks**.",
     tech: ["Java", "Spring Boot", "Spring Security", "JWT", "MySQL", "Stripe", "React", "Tailwind CSS"],
     github: "https://github.com/Nkugavarathan/cinebook-movie-event-booking",
   },
@@ -84,7 +84,7 @@ export const projects = [
     description:
       "Till and back-office system: camera barcode scanning, cashier shifts, cash-drawer reconciliation, split payments, returns, purchasing, stock counts, CSV reports and click-and-collect.",
     highlight:
-      "An idempotent, all-or-nothing checkout uses manager approval tokens and deducts stock from a locked ledger (first-expiry-first-out batches, moving-average cost).",
+      "An **idempotent, all-or-nothing checkout** uses manager approval tokens and deducts stock from a **locked inventory ledger** (first-expiry-first-out batches, moving-average cost).",
     tech: ["Java", "Spring Boot", "MySQL", "Flyway", "Bucket4j", "JUnit 5", "Next.js", "Zustand", "TanStack Query"],
     github: "https://github.com/Nkugavarathan/POS-System",
   },
@@ -95,7 +95,7 @@ export const projects = [
     description:
       "Multi-tenant platform for projects, tasks, budgets, expense approvals, purchase orders, inventory, versioned documents, risks and safety incidents.",
     highlight:
-      "6-role permission model, JWT with refresh-token rotation, and approval workflows with optimistic locking and a transactional audit trail. Covered by Testcontainers tests.",
+      "**6-role permission model**, **JWT with refresh-token rotation**, and approval workflows with **optimistic locking** and a **transactional audit trail**. Covered by **Testcontainers** tests.",
     tech: ["Java", "Spring Boot", "PostgreSQL", "Flyway", "Testcontainers", "Docker", "Next.js", "Zod", "Playwright"],
     github: "https://github.com/Nkugavarathan/Construction-Management",
   },
@@ -106,7 +106,7 @@ export const projects = [
     description:
       "Trilingual (English, Sinhala, Tamil) rental and airport-transfer platform with place autocomplete, NIC-verified owner listings and a Google sign-in admin panel.",
     highlight:
-      "Live trip tracking: drivers stream GPS and riders follow along via Server-Sent Events. Per-trip GPS trails are kept for 90 days so admins can replay routes.",
+      "**Live trip tracking**: drivers stream GPS and riders follow along via **Server-Sent Events**. Per-trip GPS trails are kept for 90 days so admins can **replay routes**.",
     tech: ["Next.js 16", "React 19", "Tailwind CSS 4", "Prisma", "MySQL", "Auth.js", "Leaflet", "Google Maps API"],
     live: "https://airportridelanka.com/en",
   },
@@ -114,7 +114,7 @@ export const projects = [
     title: "FitGenius",
     subtitle: "AI Fitness Tracker",
     description:
-      "Fitness tracking for workouts, goals and progress, with Gemini AI tips, motivation and a chat-based virtual trainer. Includes JWT auth and Recharts dashboards.",
+      "Fitness tracking for workouts, goals and progress, with **Gemini AI** tips, motivation and a **chat-based virtual trainer**. Includes JWT auth and Recharts dashboards.",
     tech: ["Java", "Spring Boot", "React", "MySQL", "Gemini AI", "Tailwind CSS"],
     github: "https://github.com/Nkugavarathan/fitgenius-ai-fitness-tracker",
   },
@@ -122,7 +122,7 @@ export const projects = [
     title: "VARA Fashion",
     subtitle: "MERN Shopping Platform",
     description:
-      "Full-stack MERN store with MVC architecture: login, product management, cart, admin dashboard, JWT and role-based auth, chatbot, analytics and PDF receipts.",
+      "Full-stack **MERN** store with **MVC architecture**: login, product management, cart, admin dashboard, JWT and role-based auth, chatbot, analytics and PDF receipts.",
     tech: ["MongoDB", "Express.js", "React", "Node.js", "Tailwind CSS"],
     github: "https://github.com/Nkugavarathan/vara-fashion-ecommerce-mern",
     demo: "https://www.youtube.com/watch?v=hywZ-p3JLxE&feature=youtu.be",

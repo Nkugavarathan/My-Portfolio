@@ -10,7 +10,7 @@ import {
   FiPlay,
   FiUsers,
 } from "react-icons/fi"
-import { Section, Reveal, Chip } from "./ui"
+import { Section, Reveal, Chip, Rich } from "./ui"
 import {
   profile,
   education,
@@ -30,7 +30,9 @@ export function About() {
       <div className="about-grid">
         <Reveal className="about-text">
           {profile.summary.map((p) => (
-            <p key={p}>{p}</p>
+            <p key={p}>
+              <Rich text={p} />
+            </p>
           ))}
         </Reveal>
 
@@ -70,7 +72,9 @@ export function Experience() {
               </div>
               <ul className="job-points">
                 {job.points.map((p) => (
-                  <li key={p}>{p}</li>
+                  <li key={p}>
+                    <Rich text={p} />
+                  </li>
                 ))}
               </ul>
               <div className="chip-row">
@@ -130,11 +134,15 @@ export function Projects() {
             </div>
             <h3>{p.title}</h3>
             <p className="project-subtitle">{p.subtitle}</p>
-            <p>{p.description}</p>
+            <p>
+              <Rich text={p.description} />
+            </p>
             {p.highlight && (
               <p className="project-highlight">
                 <FiCheckCircle aria-hidden="true" />
-                <span>{p.highlight}</span>
+                <span>
+                  <Rich text={p.highlight} />
+                </span>
               </p>
             )}
             <div className="chip-row">
@@ -154,7 +162,9 @@ export function Projects() {
           <Reveal key={p.title} className="card project-card mini">
             <h4>{p.title}</h4>
             <p className="project-subtitle">{p.subtitle}</p>
-            <p>{p.description}</p>
+            <p>
+              <Rich text={p.description} />
+            </p>
             <div className="chip-row">
               {p.tech.slice(0, 5).map((t) => (
                 <Chip key={t}>{t}</Chip>
