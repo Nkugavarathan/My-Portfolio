@@ -51,9 +51,9 @@ module.exports = async function handler(req, res) {
   // Honeypot: real visitors never fill this hidden field
   if (body.company) return res.status(200).json({ ok: true })
 
-  if (!name || !EMAIL_RE.test(email) || !subject || message.length < 10) {
+  if (!name || !EMAIL_RE.test(email) || !subject || !message) {
     return res.status(400).json({
-      error: "Please fill in your name, a valid email, a subject and a message (at least 10 characters).",
+      error: "Please fill in your name, a valid email, a subject and a message.",
     })
   }
 

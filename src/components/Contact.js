@@ -108,7 +108,6 @@ function ContactForm() {
           value={form.message}
           onChange={update}
           required
-          minLength={10}
           maxLength={5000}
           rows={5}
           placeholder="Your message..."
