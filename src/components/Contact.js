@@ -9,11 +9,12 @@ export function Contact() {
     <section id="contact" className="section">
       <div className="container">
         <Reveal className="contact-card">
-          <span className="eyebrow">Contact</span>
-          <h2 className="section-title">Let's build something together.</h2>
+          <div className="bg-blob bg-blob-contact" aria-hidden="true" />
+          <span className="eyebrow">06</span>
+          <h2 className="section-title">Get in touch</h2>
           <p className="section-intro">
-            I'm looking for Software Engineering roles. If you have a role, a
-            project or a question, my inbox is open.
+            I'm currently looking for Software Engineering opportunities. Feel
+            free to reach out about a role, a project or just to connect.
           </p>
           <div className="hero-cta center-row">
             <a className="btn btn-primary" href={profile.socials.email}>

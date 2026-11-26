@@ -1,6 +1,5 @@
 import React from "react"
 import { motion } from "framer-motion"
-import Typewriter from "typewriter-effect"
 import { FiArrowRight, FiGithub, FiLinkedin, FiMail, FiMapPin } from "react-icons/fi"
 import { FaWhatsapp } from "react-icons/fa"
 import { CvButton } from "./ui"
@@ -8,7 +7,7 @@ import { profile, stats } from "../data/portfolio"
 import photo from "../Assets/profile.jpg"
 
 const fade = (delay) => ({
-  initial: { opacity: 0, y: 20 },
+  initial: { opacity: 0, y: 16 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] },
 })
@@ -23,47 +22,35 @@ export const socialLinks = [
 function Hero() {
   return (
     <section id="home" className="hero">
-      <div className="hero-glow" aria-hidden="true" />
-      <div className="hero-grid" aria-hidden="true" />
+      <div className="bg-blob bg-blob-hero" aria-hidden="true" />
 
       <div className="container hero-inner">
         <div className="hero-copy">
-          <motion.span className="status-pill" {...fade(0)}>
+          <motion.p className="status-pill" {...fade(0)}>
             <span className="status-dot" />
-            Open to Software Engineering roles
-          </motion.span>
+            Available for Software Engineering roles
+          </motion.p>
 
           <motion.h1 className="hero-title" {...fade(0.08)}>
-            Hi, I'm <span className="gradient-text">{profile.shortName}</span>.
-            <br />
-            I build software that holds up.
+            {profile.name}
           </motion.h1>
 
-          <motion.div className="hero-roles" {...fade(0.16)}>
-            <span className="mono">&gt;</span>
-            <Typewriter
-              options={{
-                strings: profile.roles,
-                autoStart: true,
-                loop: true,
-                deleteSpeed: 30,
-                delay: 55,
-              }}
-            />
-          </motion.div>
+          <motion.p className="hero-role" {...fade(0.14)}>
+            {profile.role} <span className="sep">/</span> Backend &amp; Full-Stack
+          </motion.p>
 
-          <motion.p className="hero-tagline" {...fade(0.24)}>
+          <motion.p className="hero-tagline" {...fade(0.2)}>
             {profile.tagline}
           </motion.p>
 
-          <motion.div className="hero-cta" {...fade(0.32)}>
+          <motion.div className="hero-cta" {...fade(0.28)}>
             <CvButton />
             <a className="btn btn-secondary" href="#projects">
-              View my work <FiArrowRight aria-hidden="true" />
+              View projects <FiArrowRight aria-hidden="true" />
             </a>
           </motion.div>
 
-          <motion.div className="hero-meta" {...fade(0.4)}>
+          <motion.div className="hero-meta" {...fade(0.36)}>
             <span className="hero-location">
               <FiMapPin aria-hidden="true" /> {profile.location}
             </span>
@@ -88,24 +75,17 @@ function Hero() {
           className="hero-visual"
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="photo-frame">
+          <div className="blob-back" aria-hidden="true" />
+          <div className="blob-photo">
             <img src={photo} alt={profile.name} />
-          </div>
-          <div className="floating-card card-top">
-            <span className="mono">@Spring Boot</span>
-            <strong>REST APIs · JPA · Security</strong>
-          </div>
-          <div className="floating-card card-bottom">
-            <span className="mono">{"<Next.js />"}</span>
-            <strong>React · Tailwind CSS · Responsive UI</strong>
           </div>
         </motion.div>
       </div>
 
       <div className="container">
-        <motion.dl className="stats" {...fade(0.5)}>
+        <motion.dl className="stats" {...fade(0.45)}>
           {stats.map((s) => (
             <div key={s.label} className="stat">
               <dt>{s.label}</dt>

@@ -24,7 +24,7 @@ import {
 
 export function About() {
   return (
-    <Section id="about" eyebrow="About" title="Backend-first, full-stack capable.">
+    <Section id="about" eyebrow="01" title="About me">
       <div className="about-grid">
         <Reveal className="about-text">
           {profile.summary.map((p) => (
@@ -51,7 +51,7 @@ export function About() {
 
 export function Experience() {
   return (
-    <Section id="experience" eyebrow="Experience" title="Where I've worked.">
+    <Section id="experience" eyebrow="02" title="Experience">
       <div className="timeline">
         {experience.map((job) => (
           <Reveal key={job.role + job.company} className="timeline-item">
@@ -115,9 +115,9 @@ export function Projects() {
   return (
     <Section
       id="projects"
-      eyebrow="Projects"
-      title="Things I've built."
-      intro="Production-style systems built around real problems: concurrency, payments, permissions, audit trails and live tracking."
+      eyebrow="03"
+      title="Selected projects"
+      intro="Systems I designed and built end to end. Each one is built around a real engineering problem: concurrency, payments, permissions or live data."
     >
       <div className="featured-grid">
         {featured.map((p, i) => (
@@ -179,7 +179,7 @@ export function Projects() {
 
 export function Skills() {
   return (
-    <Section id="skills" eyebrow="Skills" title="My toolkit.">
+    <Section id="skills" eyebrow="04" title="Skills & tools">
       <div className="skills-grid">
         {skills.map((s, i) => (
           <Reveal key={s.group} delay={(i % 3) * 0.06} className="card skill-card">
@@ -205,10 +205,10 @@ export function Skills() {
             fontSize={13}
             theme={{
               level0: "#1a2233",
-              level1: "#0e4f63",
-              level2: "#0b7a94",
-              level3: "#14a8c9",
-              level4: "#5ee1ff",
+              level1: "#1e2f6b",
+              level2: "#2c4bb0",
+              level3: "#4a74f2",
+              level4: "#9db8ff",
             }}
           />
         </div>
@@ -219,7 +219,7 @@ export function Skills() {
 
 export function Highlights() {
   return (
-    <Section id="highlights" eyebrow="Beyond code" title="Leadership & learning.">
+    <Section id="highlights" eyebrow="05" title="Leadership & achievements">
       <div className="highlights-grid">
         <Reveal className="card list-card">
           <h3 className="card-label">
